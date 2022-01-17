@@ -1,7 +1,9 @@
 package com.metehanbolat.mvvmarchitecture.model
 
 data class User(
-    var name: String,
-    var surname: String,
-    var age: Int
-)
+    val name: String,
+    val surname: String,
+    val age: Int
+) {
+    override fun equals(other: Any?) = other is User && other.age == this.age
+}
